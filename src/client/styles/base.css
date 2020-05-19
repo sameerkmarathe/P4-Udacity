@@ -1,7 +1,9 @@
-body {
+.temp {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: url('https://www.marketmotive.com/market_motive/sentiment-analysis.jpg');
+    background-size: cover;
 }
 
 main {
@@ -11,4 +13,16 @@ main {
 section {
     max-width: 800px;
     margin: 50px auto;
+}
+
+.url-results {
+    color: white;
+}
+
+#polarity,
+#polarity_confidence,
+#subjectivity,
+#subjectivity_confidence,
+#excerpt {
+    padding: 1em;
 }

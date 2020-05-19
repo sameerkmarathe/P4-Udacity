@@ -2,11 +2,11 @@ var path = require('path');
 const express = require('express');
 const aylien = require("aylien_textapi");
 const dotenv = require('dotenv');
+const cors = require('cors');
 dotenv.config();
 const textapi = new aylien({
-    application_id = process.env.API_ID,
-    application_key = process.env.API_KEY
-
+    application_id: process.env.API_ID,
+    application_key: process.env.API_KEY
 });
 const app = express();
 
@@ -26,10 +26,10 @@ app.listen(8080, function() {
     console.log('Example app listening on port 8080!')
 })
 
-app.get('/test/:testurl', function(req, res) {
-    let testurl = req.params.testurl || '';
-    if (testurl) {
-        textapi.sentiment({ url: testurl }, (error, response) => {
+app.get('/test/:testURL', function(req, res) {
+    let testURL = req.params.testURL || '';
+    if (testURL) {
+        textapi.sentiment({ url: testURL }, (error, response) => {
             if (error === null) {
                 res.send({
                     "message": response,

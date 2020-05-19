@@ -3,3 +3,9 @@ header {
     justify-content: space-between;
     padding: 10px 40px;
 }
+
+.header-logo {
+    font-size: 40px;
+    text-transform: capitalize;
+    color: rgb(250, 242, 242);
+}

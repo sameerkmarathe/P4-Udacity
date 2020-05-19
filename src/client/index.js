@@ -1,7 +1,12 @@
-import { checkForName } from './js/nameChecker'
-import { handleSubmit } from './js/formHandler'
+import './styles/base.css';
+import './styles/footer.css';
 
-console.log(checkForName);
+import './styles/header.css';
+import './styles/form.css';
+import './styles/resets.css';
+const handleSubmit = require("../client/js/formHandler");
 
-alert("I EXIST")
-console.log("CHANGE!!");
+document.getElementById('processURLButton').addEventListener('click', function() {
+    let URL = document.getElementById('url').value;
+    handleSubmit(URL)
+});
